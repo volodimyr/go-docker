@@ -12,5 +12,7 @@ ADD Gopkg.lock Gopkg.lock
 RUN dep ensure --vendor-only
 # add source code
 ADD src src
-# run main.go
-CMD ["go", "run", "src/main.go"]
+# build main.go
+RUN go build src/main.go
+# run the binary
+CMD ["./main"]

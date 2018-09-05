@@ -18,3 +18,7 @@ func main() {
 //Package management and layering
 //docker build -t go-docker-dev .
 //docker run --rm -it -v $(pwd):/go/src/app go-docker-dev bash
+
+//Single Stage Production Build
+//docker build -t go-docker-prod .
+//docker run --rm -it -p 8080:8080 go-docker-prod
