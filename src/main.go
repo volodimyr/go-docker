@@ -1,8 +1,8 @@
 package main
 
 import (
-	"net/http"
 	"log"
+	"net/http"
 )
 
 func main() {
@@ -10,3 +10,11 @@ func main() {
 		log.Fatalln(err)
 	}
 }
+
+//The simplest one
+//docker build -t go-docker-dev .
+//docker run --rm -it -p 8080:8080 go-docker-dev
+
+//Package management and layering
+//docker build -t go-docker-dev .
+//docker run --rm -it -v $(pwd):/go/src/app go-docker-dev bash
